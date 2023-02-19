@@ -10,11 +10,14 @@
 
 int main(void)
 {
-	char low;
+	int ansi_number;
 
-	for (low = 'a'; low <= 'z'; low++)
-		putchar(low);
-		putchar('\n');
-
+	ansi_number = 'a';
+	while (ansi_number < '{')
+	{
+		putchar(ansi_number);
+		ansi_number++;
+	}
+	putchar('\n');
 	return (0);
 }
