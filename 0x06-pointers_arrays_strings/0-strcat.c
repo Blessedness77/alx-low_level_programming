@@ -1,4 +1,3 @@
-#include <string.h>
 #include "main.h"
 /**
  * _strcat - concatenates two strings
@@ -9,13 +8,20 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int len1 = 0, len2;
-
-	while (*(dest + len1) != '\0')
-
-		len1++;
-	for (len2 = 0; src[len2] != '\0'; ++len2)
-		dest[len1 + len2] = src[len2];
-	dest[len1 + len2] = '\0';
-	return (dest);
+int i;
+int j;
+i = 0;
+while (dest[i] != '\0')
+{
+i++;
+}
+j = 0;
+while (src[j] != '\0')
+{
+dest[i] = src[j];
+i++;
+j++;
+}
+dest[i] = '\0';
+return (dest);
 }
