@@ -1,1 +1,1 @@
-more functions about pointers, arrays, and strings
+arrays, pointers, and strings in c language.
