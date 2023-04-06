@@ -10,26 +10,26 @@ size_t print_list(const list_t *h)
 {
 	const list_t *head = h;
 	char *str;
-	size_t len = 0, flen;
+	size_t ln = 0, glen;
 
 	if (!head)
 		return (0);
 	do {
-		flen = 0;
+		glen = 0;
 		str = head->str;
 		if (str)
 			while (*str)
 			{
-				flen++;
+				glen++;
 				str++;
 			}
 		if (head->str)
-			printf("[%lu] %s\n", flen, head->str);
+			printf("[%lu] %s\n", glen, head->str);
 		else
 			printf("[0] (nil)\n");
-		len++;
+		ln++;
 		head = head->next;
 	} while (head);
 
-	return (len);
+	return (ln);
 }
